@@ -1,0 +1,143 @@
+/* MOBILE MENU */
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle {
+    order: 1;
+}
+
+.nav-item.button {
+    order: 2;
+}
+
+.nav-item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+}
+
+.nav-item.active {
+    display: block;
+}
+
+.toggle {
+    cursor: pointer;
+
+}
+
+.hamburger-menu {
+    background: #999;
+    display: inline-block;
+    height: 0.1rem;
+    width: 2rem;
+    position: relative;
+}
+
+.hamburger-menu::before,.hamburger-menu::after {
+    background: #999;
+    content: "";
+    display: inline-block;
+    height: 0.1rem;
+    width: 2rem;
+    position: absolute;
+    
+}
+
+.hamburger-menu::before {
+    top: 0.5rem;
+}
+.hamburger-menu::after {
+    top: -0.5rem;
+}
+
+
+/* TABLET MENU */
+
+@media all and (min-width: 468px) {
+
+    .menu {
+        justify-content: center;
+    }
+
+    .logo {
+        flex: 1;
+    }
+
+    .nav-item.button {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+
+    .toggle {
+        order:2;
+    }
+    .button.secondary {
+        border: 0;
+    }
+    .button a {
+        text-decoration: none;
+        padding: 0.6rem 1rem;
+        background: #006d6d;
+        border: 1px solid #006d6d;
+        border-radius: 50em;
+    }
+
+    .button.secondary a {
+        background: transparent;
+    }
+
+    .button a:hover {
+        transition: all .25s;
+    }
+
+    .button:not(.secondary) a:hover {
+        background: #006d6d;
+        border-color: #005959;
+    }
+
+    .button.secondary a:hover {
+        color: #ddd;
+    }
+
+}
+
+@media all and (min-width: 768px) {
+    .nav-item {
+        display: block;
+        width: auto;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .logo {
+        order:0;
+    }
+
+    .nav-item {
+        order: 1;
+    }
+
+    .button {
+        order: 2;
+    }
+
+    .menu li {
+        padding: 1rem 0.7rem;
+
+    }
+
+    .menu li.button {
+        padding-right: 0;
+    }
+
+
+}

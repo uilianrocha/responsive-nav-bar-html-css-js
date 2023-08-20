@@ -29,6 +29,12 @@ a:hover {
     
 }
 
+.line:hover {
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
 .menu li {
     font-size: 1rem;
     padding: 1rem 0.5rem;
